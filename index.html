@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="پای‌لب، پلتفرم آموزش هوش مصنوعی، پایتون و برنامه‌نویسی"
+  />
+  <title>پای‌لب | آموزش هوش مصنوعی و پایتون</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-main">
+      <div class="container header-main-inner">
+        <div class="brand-box">
+          <a href="#" class="brand" aria-label="صفحه اصلی پای‌لب">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-text">
+              <strong>پای‌لب</strong>
+              <small>رفیق یادگیری تو</small>
+            </span>
+          </a>
+        </div>
+
+        <form class="search-box" id="searchForm" role="search">
+          <button type="submit" aria-label="جستجو">
+            <span class="search-icon" aria-hidden="true"></span>
+          </button>
+
+          <label class="sr-only" for="searchInput">
+            جستجوی دوره، مدرس یا موضوع
+          </label>
+
+          <input
+            id="searchInput"
+            name="query"
+            type="search"
+            placeholder="اسم دوره، مدرس یا موضوع رو اینجا جستجو کن"
+            autocomplete="off"
+          />
+        </form>
+
+        <div class="user-actions">
+          <a href="#" class="library-btn">
+            <span class="library-icon" aria-hidden="true"></span>
+            <span>دوره‌های من</span>
+          </a>
+
+          <div class="profile-wrap">
+            <button
+              class="profile-menu"
+              id="profileToggle"
+              type="button"
+              aria-label="باز کردن منوی کاربر"
+              aria-controls="profileDropdown"
+              aria-expanded="false"
+            >
+              <span class="profile-arrow" aria-hidden="true"></span>
+              <span class="avatar" aria-hidden="true"></span>
+            </button>
+
+            <div
+              class="profile-dropdown"
+              id="profileDropdown"
+              role="menu"
+              aria-hidden="true"
+            >
+              <a href="#" role="menuitem">داشبورد من</a>
+              <a href="#" role="menuitem">دوره‌های من</a>
+              <a href="#" role="menuitem">پیشرفت یادگیری</a>
+              <a href="#" role="menuitem">تنظیمات حساب</a>
+              <button type="button" role="menuitem">خروج</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav">
+      <div class="container header-nav-inner">
+        <nav class="main-nav" aria-label="منوی اصلی">
+          <a href="#" class="active" aria-current="page">
+            <span class="home-icon" aria-hidden="true"></span>
+            <span>صفحه اصلی</span>
+          </a>
+
+          <a href="#">
+            <span class="grid-icon" aria-hidden="true"></span>
+            <span>دسته‌بندی دوره‌ها</span>
+          </a>
+
+          <a href="#">
+            <span class="mic-icon" aria-hidden="true"></span>
+            <span>پادکست‌ها</span>
+          </a>
+
+          <a href="#">
+            <span class="mag-icon" aria-hidden="true"></span>
+            <span>مقالات آموزشی</span>
+          </a>
+
+          <a href="#">
+            <span class="spark-icon" aria-hidden="true"></span>
+            <span>مسیرهای یادگیری</span>
+          </a>
+        </nav>
+
+        <nav class="secondary-nav" aria-label="پیوندهای تکمیلی">
+          <a href="#">درباره ما</a>
+          <a href="#">پشتیبانی</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" aria-label="دوره ویژه هفته">
+      <div class="container">
+        <div class="hero-slider" id="heroSlider">
+          <article class="hero-card hero-slide active" data-slide-index="0">
+            <div class="hero-copy">
+              <p class="hero-eyebrow podcast-badge">دوره رایگان هفته</p>
+              <h1>شروع برنامه‌نویسی با پایتون</h1>
+              <p class="hero-description">
+                اولین قدم برای ورود به دنیای هوش مصنوعی و برنامه‌نویسی
+              </p>
+              <a href="#" class="hero-cta">
+                <span class="cta-arrow" aria-hidden="true"></span>
+                <strong>رایگان یاد بگیر</strong>
+              </a>
+            </div>
+
+            <div class="hero-course" aria-hidden="true">
+              <div class="course-cover">
+                <span class="course-label">PYLAB</span>
+                <h2>پایتون</h2>
+                <h3>از صفر تا اولین پروژه</h3>
+                <span class="course-level">مقدماتی</span>
+
+                <div class="course-graphic">
+                  <div class="code-line line-one"></div>
+                  <div class="code-line line-two"></div>
+                  <div class="code-line line-three"></div>
+                  <div class="python-shape shape-one"></div>
+                  <div class="python-shape shape-two"></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="hero-controls" aria-label="کنترل اسلایدر">
+            <div class="hero-dots" id="heroDots">
+              <button
+                class="hero-dot active"
+                type="button"
+                aria-label="نمایش اسلاید اول"
+                aria-current="true"
+                data-slide-to="0"
+              ></button>
+            </div>
+
+            <button
+              class="hero-arrow hero-prev"
+              id="heroPrev"
+              type="button"
+              aria-label="اسلاید قبلی"
+            ></button>
+          </div>
+        </div>
+
+        <div class="category-slider" aria-label="دسته‌بندی دوره‌ها">
+          <div class="category-list" id="categoryList">
+            <a
+              href="#"
+              class="category-pill active"
+              data-category="all"
+              aria-current="true"
+            >
+              <span class="book-icon" aria-hidden="true"></span>
+              <span>جدیدترین دوره‌ها</span>
+            </a>
+
+            <a href="#" class="category-pill" data-category="free">
+              <span class="badge-icon" aria-hidden="true"></span>
+              <span>دوره‌های رایگان</span>
+            </a>
+
+            <a
+              href="#"
+              class="category-pill"
+              data-category="artificial-intelligence"
+            >
+              <span class="headphone-icon" aria-hidden="true"></span>
+              <span>هوش مصنوعی</span>
+            </a>
+
+            <a href="#" class="category-pill" data-category="python">
+              <span class="chart-icon" aria-hidden="true"></span>
+              <span>پایتون و برنامه‌نویسی</span>
+            </a>
+
+            <a
+              href="#"
+              class="category-pill"
+              data-category="machine-learning"
+            >
+              <span class="bell-icon" aria-hidden="true"></span>
+              <span>یادگیری ماشین</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="course-list section-space-md" aria-label="دوره‌های آموزشی">
+      <div class="container">
+        <div class="course-list-header">
+          <h2>دوره‌های آموزشی پای‌لب</h2>
+          <p>یادگیری مهارت‌های کاربردی با دوره‌های پروژه‌محور و گام‌به‌گام</p>
+        </div>
+
+        <div class="course-list-grid">
+          <article class="course-cover">
+            <span class="course-level">مقدماتی</span>
+            <h2>شبکه عصبی به زبان ساده</h2>
+            <h3>از صفر تا اولین پروژه</h3>
+
+            <div class="course-graphic">
+              <div class="code-line line-one"></div>
+              <div class="code-line line-two"></div>
+              <div class="code-line line-three"></div>
+              <div class="python-shape shape-one"></div>
+              <div class="python-shape shape-two"></div>
+            </div>
+
+            <div class="course-footer">
+              <div class="course-actions">
+                <button class="btn-preview" type="button">پیش‌نمایش دوره</button>
+                <button class="btn-register" type="button">ثبت نام دوره</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-cover">
+            <span class="course-level">مقدماتی</span>
+            <h2>نظریه بازی‌ها</h2>
+            <h3>از صفر تا اولین پروژه</h3>
+
+            <div class="course-graphic">
+              <div class="code-line line-one"></div>
+              <div class="code-line line-two"></div>
+              <div class="code-line line-three"></div>
+              <div class="python-shape shape-one"></div>
+              <div class="python-shape shape-two"></div>
+            </div>
+
+            <div class="course-footer">
+              <div class="course-actions">
+                <button class="btn-preview" type="button">پیش‌نمایش دوره</button>
+                <button class="btn-register" type="button">ثبت نام دوره</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-cover">
+            <span class="course-level">مقدماتی</span>
+            <h2>مبانی امنیت سایبری</h2>
+            <h3>از صفر تا اولین پروژه</h3>
+
+            <div class="course-graphic">
+              <div class="code-line line-one"></div>
+              <div class="code-line line-two"></div>
+              <div class="code-line line-three"></div>
+              <div class="python-shape shape-one"></div>
+              <div class="python-shape shape-two"></div>
+            </div>
+
+            <div class="course-footer">
+              <div class="course-actions">
+                <button class="btn-preview" type="button">پیش‌نمایش دوره</button>
+                <button class="btn-register" type="button">ثبت نام دوره</button>
+              </div>
+            </div>
+          </article>
+          <article class="course-cover ">
+            <span class="course-level">مقدماتی</span>
+            <h2>شبکه عصبی به زبان ساده</h2>
+            <h3>از صفر تا اولین پروژه</h3>
+
+            <div class="course-graphic">
+              <div class="code-line line-one"></div>
+              <div class="code-line line-two"></div>
+              <div class="code-line line-three"></div>
+              <div class="python-shape shape-one"></div>
+              <div class="python-shape shape-two"></div>
+            </div>
+
+            <div class="course-footer">
+              <div class="course-actions">
+                <button class="btn-preview" type="button">پیش‌نمایش دوره</button>
+                <button class="btn-register" type="button">ثبت نام دوره</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-cover">
+            <span class="course-level">مقدماتی</span>
+            <h2>نظریه بازی‌ها</h2>
+            <h3>از صفر تا اولین پروژه</h3>
+
+            <div class="course-graphic">
+              <div class="code-line line-one"></div>
+              <div class="code-line line-two"></div>
+              <div class="code-line line-three"></div>
+              <div class="python-shape shape-one"></div>
+              <div class="python-shape shape-two"></div>
+            </div>
+
+            <div class="course-footer">
+              <div class="course-actions">
+                <button class="btn-preview" type="button">پیش‌نمایش دوره</button>
+                <button class="btn-register" type="button">ثبت نام دوره</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-cover">
+            <span class="course-level">مقدماتی</span>
+            <h2>مبانی امنیت سایبری</h2>
+            <h3>از صفر تا اولین پروژه</h3>
+
+            <div class="course-graphic">
+              <div class="code-line line-one"></div>
+              <div class="code-line line-two"></div>
+              <div class="code-line line-three"></div>
+              <div class="python-shape shape-one"></div>
+              <div class="python-shape shape-two"></div>
+            </div>
+
+            <div class="course-footer">
+              <div class="course-actions">
+                <button class="btn-preview" type="button">پیش‌نمایش دوره</button>
+                <button class="btn-register" type="button">ثبت نام دوره</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="course-list-footer">
+          <a href="#" class="course-more-btn">مشاهده همه دوره‌ها</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="course-list course-list-second section-space-md" aria-label="دوره‌های پیشنهادی">
+      <div class="container">
+        <div class="course-list-header">
+          <h2>دوره‌های پیشنهادی</h2>
+          <p>مسیرهای آموزشی منتخب برای شروع و ادامه یادگیری.</p>
+        </div>
+
+        <div class="course-list-grid">
+          <article class="course-cover">
+            <span class="course-level">مقدماتی</span>
+            <h2>شبکه عصبی به زبان ساده</h2>
+            <h3>از صفر تا اولین پروژه</h3>
+
+            <div class="course-graphic">
+              <div class="code-line line-one"></div>
+              <div class="code-line line-two"></div>
+              <div class="code-line line-three"></div>
+              <div class="python-shape shape-one"></div>
+              <div class="python-shape shape-two"></div>
+            </div>
+
+            <div class="course-footer">
+              <div class="course-actions">
+                <button class="btn-preview" type="button">پیش‌نمایش دوره</button>
+                <button class="btn-register" type="button">ثبت نام دوره</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-cover">
+            <span class="course-level">مقدماتی</span>
+            <h2>نظریه بازی‌ها</h2>
+            <h3>از صفر تا اولین پروژه</h3>
+
+            <div class="course-graphic">
+              <div class="code-line line-one"></div>
+              <div class="code-line line-two"></div>
+              <div class="code-line line-three"></div>
+              <div class="python-shape shape-one"></div>
+              <div class="python-shape shape-two"></div>
+            </div>
+
+            <div class="course-footer">
+              <div class="course-actions">
+                <button class="btn-preview" type="button">پیش‌نمایش دوره</button>
+                <button class="btn-register" type="button">ثبت نام دوره</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-cover">
+            <span class="course-level">مقدماتی</span>
+            <h2>مبانی امنیت سایبری</h2>
+            <h3>از صفر تا اولین پروژه</h3>
+
+            <div class="course-graphic">
+              <div class="code-line line-one"></div>
+              <div class="code-line line-two"></div>
+              <div class="code-line line-three"></div>
+              <div class="python-shape shape-one"></div>
+              <div class="python-shape shape-two"></div>
+            </div>
+
+            <div class="course-footer">
+              <div class="course-actions">
+                <button class="btn-preview" type="button">پیش‌نمایش دوره</button>
+                <button class="btn-register" type="button">ثبت نام دوره</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="course-list-footer">
+          <a href="#" class="course-more-btn">مشاهده همه دوره‌ها</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-section hero-section-second section-space-md" aria-label="دوره ویژه پیشنهادی">
+      <div class="container">
+        <div class="hero-slider hero-slider-second" id="heroSliderSecond">
+          <article class="hero-card hero-slide active" data-slide-index="0">
+            <div class="hero-copy">
+              <p class="hero-eyebrow podcast-badge">پیشنهاد ویژه پای‌لب</p>
+              <h1>ورود به دنیای هوش مصنوعی</h1>
+              <p class="hero-description">
+                همه‌چیز برای یک تجربه یادگیری ساده، کاربردی و مستمر آماده است. یادگیری مفاهیم پایه هوش مصنوعی با یک مسیر ساده و پروژه‌محور
+              </p>
+              <a href="#" class="hero-cta">
+                <span class="cta-arrow" aria-hidden="true"></span>
+                <strong>مشاهده دوره</strong>
+              </a>
+            </div>
+
+            <div class="hero-course" aria-hidden="true">
+              <div class="course-cover">
+                <span class="course-label">PYLAB</span>
+                <h2>هوش مصنوعی</h2>
+                <h3>از مفاهیم پایه تا پروژه عملی</h3>
+                <span class="course-level">مقدماتی</span>
+
+                <div class="course-graphic">
+                  <div class="code-line line-one"></div>
+                  <div class="code-line line-two"></div>
+                  <div class="code-line line-three"></div>
+                  <div class="python-shape shape-one"></div>
+                  <div class="python-shape shape-two"></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="hero-controls" aria-label="کنترل اسلایدر دوم">
+            <div class="hero-dots" id="heroDotsSecond">
+              <button
+                class="hero-dot active"
+                type="button"
+                aria-label="نمایش اسلاید اول"
+                aria-current="true"
+                data-slide-to="0"
+              ></button>
+            </div>
+
+            <button
+              class="hero-arrow hero-prev"
+              id="heroPrevSecond"
+              type="button"
+              aria-label="اسلاید قبلی"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section section-space-md" aria-labelledby="benefitsTitle">
+      <div class="container">
+        <div class="benefits-header">
+          <h2 id="benefitsTitle">چرا پای‌لب؟</h2>
+          <p>
+            همه‌چیز برای یک تجربه یادگیری ساده، کاربردی و مستمر آماده است.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-item">
+            <span class="benefit-icon benefit-icon-learning" aria-hidden="true"></span>
+            <div class="benefit-content">
+              <h3>آموزش‌های ساختاریافته</h3>
+              <p>مفاهیم را مرحله‌به‌مرحله و از پایه یاد بگیر. از پایه یاد بگی</p>
+            </div>
+          </article>
+
+          <article class="benefit-item">
+            <span class="benefit-icon benefit-icon-project" aria-hidden="true"></span>
+            <div class="benefit-content">
+              <h3>یادگیری پروژه‌محور</h3>
+              <p>دانسته‌هایت را با پروژه‌های واقعی به مهارت تبدیل کن.</p>
+            </div>
+          </article>
+
+          <article class="benefit-item">
+            <span class="benefit-icon benefit-icon-content" aria-hidden="true"></span>
+            <div class="benefit-content">
+              <h3>محتوای متنوع آموزشی</h3>
+              <p>ویدیو، متن و محتوای صوتی را در کنار هم داشته باش.</p>
+            </div>
+          </article>
+
+          <article class="benefit-item">
+            <span class="benefit-icon benefit-icon-progress" aria-hidden="true"></span>
+            <div class="benefit-content">
+              <h3>پیگیری مسیر پیشرفت</h3>
+              <p>پیشرفت یادگیری خودت را در هر مرحله دنبال کن.خودت را در هر مرحله</p>
+            </div>
+          </article>
+
+          <article class="benefit-item">
+            <span class="benefit-icon benefit-icon-practice" aria-hidden="true"></span>
+            <div class="benefit-content">
+              <h3>تمرین‌های کاربردی</h3>
+              <p>با خودت را در هر مرحله تمرین‌های هدفمند، آموخته‌هایت را تثبیت کن.</p>
+            </div>
+          </article>
+
+          <article class="benefit-item">
+            <span class="benefit-icon benefit-icon-access" aria-hidden="true"></span>
+            <div class="benefit-content">
+              <h3>دسترسی آسان و همیشگی</h3>
+              <p>هر زمان و از هرجا به دوره‌ها و مسیرت دسترسی داشته باش.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Podcasts Section -->
+    <section class="podcasts-section" id="podcasts">
+  <div class="container">
+    <div class="podcast-header">
+      <h2>یادگیری را با شنیدن ادامه بده</h2>
+      <p>
+        اپیزودهای کوتاه و کاربردی درباره هوش مصنوعی، برنامه‌نویسی، پایتون و مسیر یادگیری.
+      </p>
+    </div>
+
+    <div class="podcasts-layout">
+      <article class="podcast-featured-card">
+        <div class="podcast-featured-content">
+          <span class="podcast-badge">اپیزود ویژه</span>
+
+          <h3 class="podcast-featured-title">تاریخچه شبکه‌های عصبی ...</h3>
+
+          <p class="podcast-description">
+            در این اپیزود، خیلی ساده بررسی می‌کنیم هوش مصنوعی چطور از داده‌ها یاد می‌گیرد و چرا شبکه‌های عصبی اهمیت دارند.
+          </p>
+
+          <div class="podcast-meta">
+            <span>۲۴ دقیقه</span>
+            <span>هوش مصنوعی</span>
+          </div>
+
+          <button class="podcast-play-button" type="button">
+            <span class="podcast-play-icon"></span>
+            پخش اپیزود
+          </button>
+        </div>
+
+        <div class="podcast-visual" aria-hidden="true">
+          <div class="podcast-wave podcast-wave-1"></div>
+          <div class="podcast-wave podcast-wave-2"></div>
+          <div class="podcast-wave podcast-wave-3"></div>
+          <div class="podcast-wave podcast-wave-4"></div>
+          <div class="podcast-wave podcast-wave-5"></div>
+        </div>
+      </article>
+      <div class="podcast-list">
+        <article class="podcast-small-card">
+          <div>
+            <span class="podcast-number">اپیزود ۰۲</span>
+            <h3 class="podcast-title">از پایتون شروع کنیم یا نه؟</h3>
+            <p>یک راهنمای کوتاه برای انتخاب مسیر درست شروع برنامه‌نویسی.</p>
+          </div>
+
+          <div class="podcast-small-footer">
+            <span>۱۸ دقیقه</span>
+            <button class="podcast-icon-button" type="button" aria-label="پخش اپیزود از پایتون شروع کنیم یا نه؟">
+              <span class="podcast-play-icon"></span>
+            </button>
+          </div>
+        </article>
+
+        <article class="podcast-small-card">
+          <div>
+            <span class="podcast-number">اپیزود ۰۳</span>
+            <h3 class="podcast-title">مغز انسان و شبکه‌های عصبی</h3>
+            <p>نگاهی ساده به ارتباط ایده‌های علوم اعصاب با مدل‌های هوش مصنوعی.</p>
+          </div>
+
+          <div class="podcast-small-footer">
+            <span>۲۱ دقیقه</span>
+            <button class="podcast-icon-button" type="button" aria-label="پخش اپیزود مغز انسان و شبکه‌های عصبی">
+              <span class="podcast-play-icon"></span>
+            </button>
+          </div>
+        </article>
+
+        <article class="podcast-small-card">
+          <div>
+            <span class="podcast-number">اپیزود ۰۴</span>
+            <h3 class="podcast-title">چرا یادگیری ماشین مهم است؟</h3>
+            <p>یک توضیح کاربردی از نقش یادگیری ماشین در محصول‌ها و کسب‌وکارها.</p>
+          </div>
+
+          <div class="podcast-small-footer">
+            <span>۱۶ دقیقه</span>
+            <button class="podcast-icon-button" type="button" aria-label="پخش اپیزود چرا یادگیری ماشین مهم است؟">
+              <span class="podcast-play-icon"></span>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="podcasts-action">
+      <a href="#" class="all-podcast-btn">مشاهده همه پادکست‌ها</a>
+    </div>
+  </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section class="blog-section" aria-labelledby="blog-section-title">
+      <div class="container">
+        <div class="podcast-header">
+          <h2>مقالات آموزشی</h2>
+          <p>
+            اپیزودهای کوتاه و کاربردی درباره هوش مصنوعی، برنامه‌نویسی، پایتون و مسیر یادگیری.
+          </p>
+        </div>
+    
+        <div class="blog-grid">
+          <article class="blog-card">
+            <a href="#" class="blog-card-media" aria-label="مشاهده مقاله شروع یادگیری هوش مصنوعی"></a>
+    
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">یادگیری</span>
+                <span class="blog-card-reading-time">۶ دقیقه مطالعه</span>
+              </div>
+    
+              <h3 class="blog-card-title">
+                <a href="#">شروع یادگیری هوش مصنوعی برای برنامه‌نویسان</a>
+              </h3>
+    
+              <p class="blog-card-excerpt">
+                یک مسیر روشن برای شروع مفاهیم پایه، انتخاب منابع درست و ساختن روند مطالعه‌ای که در عمل قابل ادامه باشد.
+              </p>
+    
+              <div class="blog-card-footer">
+                <time datetime="2026-08-01">۱۰ مرداد ۱۴۰۵</time>
+                <a href="#" class="blog-card-link">مطالعه</a>
+              </div>
+            </div>
+          </article>
+    
+          <article class="blog-card">
+            <a href="#" class="blog-card-media blog-card-media-alt" aria-label="مشاهده مقاله تفاوت داده و مدل"></a>
+    
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">داده</span>
+                <span class="blog-card-reading-time">۵ دقیقه مطالعه</span>
+              </div>
+    
+              <h3 class="blog-card-title">
+                <a href="#">چرا کیفیت داده از پیچیدگی مدل مهم‌تر است</a>
+              </h3>
+    
+              <p class="blog-card-excerpt">
+                بسیاری از خطاهای مدل از خود الگوریتم نمی‌آیند؛ از داده، برچسب‌گذاری ضعیف و مسئله‌بندی نادرست شروع می‌شوند.
+              </p>
+    
+              <div class="blog-card-footer">
+                <time datetime="2026-07-28">۷ مرداد ۱۴۰۵</time>
+                <a href="#" class="blog-card-link">مطالعه</a>
+              </div>
+            </div>
+          </article>
+    
+          <article class="blog-card">
+            <a href="#" class="blog-card-media blog-card-media-third" aria-label="مشاهده مقاله تفکر سیستمی در برنامه‌نویسی"></a>
+    
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">تفکر سیستمی</span>
+                <span class="blog-card-reading-time">۷ دقیقه مطالعه</span>
+              </div>
+    
+              <h3 class="blog-card-title">
+                <a href="#">تفکر سیستمی چه اثری بر کیفیت کدنویسی دارد</a>
+              </h3>
+    
+              <p class="blog-card-excerpt">
+                وقتی سیستم را به‌جای فایل و تابع ببینی، تصمیم‌های فنی دقیق‌تر می‌شوند و نگهداری پروژه هزینه کمتری پیدا می‌کند.
+              </p>
+    
+              <div class="blog-card-footer">
+                <time datetime="2026-07-24">۳ مرداد ۱۴۰۵</time>
+                <a href="#" class="blog-card-link">مطالعه</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="blog-footer-action">
+          <a href="#" class="btn btn-outline">مشاهده تمام مقالات</a>
+        </div>
+
+      </div>
+    </section>
+        
+
+  </main>
+
+
+  
+  <div
+    class="site-toast"
+    id="siteToast"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
